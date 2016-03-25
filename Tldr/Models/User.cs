@@ -8,12 +8,12 @@ namespace Tldr.Models
 {
     public class User
     {
-        private ICollection<BookMark> _bookmarks;
+        private ICollection<Bookmark> _bookmarks;
         private ICollection<Creative> _creatives;
 
         public User()
         {
-            _bookmarks = new List<BookMark>();
+            _bookmarks = new List<Bookmark>();
             _creatives = new List<Creative>();
         }
 
@@ -26,7 +26,7 @@ namespace Tldr.Models
         public DateTime BirthDate{get; set; }
         public string Status { get; set; }
 
-        public virtual ICollection<BookMark> Bookmarks
+        public virtual ICollection<Bookmark> Bookmarks
         {
             get { return _bookmarks; }
             set { _bookmarks = value; }

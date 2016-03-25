@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tldr.Models
 {
-    public class BookMark
+    public class Bookmark
     {
         public int BookmarkId { get; set; }
         public int CreativeId { get; set; }
