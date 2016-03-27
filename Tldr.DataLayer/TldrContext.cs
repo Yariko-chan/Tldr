@@ -4,32 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
-using Tldr.Models;
+using Tldr.DomainClasses;
 
 namespace Tldr.DataLayer
 {
     public class TldrContext: DbContext
     {
 
-        public DbSet<Models.Bookmark> BookMarks { get; set; }
-        public DbSet<Models.Category> Categories { get; set; }
-        public DbSet<Models.Comment> Comments { get; set; }
-        public DbSet<Models.Creative> Creatives { get; set; }
-        public DbSet<Models.CreativePart> CreativeParts { get; set; }
-        public DbSet<Models.Tag> Tags { get; set; }
-        public DbSet<Models.User> Users { get; set; }
+        public DbSet<Bookmark> BookMarks { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Creative> Creatives { get; set; }
+        public DbSet<CreativePart> CreativeParts { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Models.Bookmark>()
+            modelBuilder.Entity<Bookmark>()
                 .HasRequired(s => s.User)
                 .WithMany(s => s.Bookmarks)
                 .HasForeignKey(s => s.UserId)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Models.Comment>()
+            modelBuilder.Entity<Comment>()
                 .HasRequired(s => s.User)
                 .WithMany()
                 .HasForeignKey(s => s.UserId)

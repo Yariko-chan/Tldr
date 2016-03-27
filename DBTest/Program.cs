@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using Tldr.DataLayer;
 using Tldr.DataLayer.Migrations;
-using Tldr.Models;
+using Tldr.DomainClasses;
 
 namespace DBTest
 {

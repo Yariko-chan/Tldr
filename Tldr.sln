@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tldr.DataLayer", "Tldr.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBTest", "DBTest\DBTest.csproj", "{4013355C-ECF7-430A-BA37-558F52EA4C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tldr.DomainClasses", "Tldr.DomainClasses\Tldr.DomainClasses.csproj", "{C7F5D5DA-E791-44A5-B3A2-7319D93BAB6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4013355C-ECF7-430A-BA37-558F52EA4C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4013355C-ECF7-430A-BA37-558F52EA4C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4013355C-ECF7-430A-BA37-558F52EA4C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7F5D5DA-E791-44A5-B3A2-7319D93BAB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7F5D5DA-E791-44A5-B3A2-7319D93BAB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7F5D5DA-E791-44A5-B3A2-7319D93BAB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7F5D5DA-E791-44A5-B3A2-7319D93BAB6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
