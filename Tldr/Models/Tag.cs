@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tldr.Models
 {
-    public class Tag
+    public class Tag:StateInfo
     {
         private ICollection<Creative> _creatives;
 

@@ -6,7 +6,7 @@ using Tldr.Enums;
 
 namespace Tldr.Models
 {
-    public class Creative
+    public class Creative:StateInfo
     {
         private ICollection<Tag> _tags;
         private ICollection<CreativePart> _parts;
@@ -29,9 +29,7 @@ namespace Tldr.Models
             get { return _tags; }
             set { _tags = value;  }
         }
-
-        public DateTime CreativeCreateDate { get; set; }
-        public DateTime CreativeChangeDate { get; set; }
+        
         public int CreativeRate { get; set; }
 
         public virtual ICollection<CreativePart> Parts

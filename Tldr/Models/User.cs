@@ -6,7 +6,7 @@ using Tldr.Enums;
 
 namespace Tldr.Models
 {
-    public class User
+    public class User:StateInfo
     {
         private ICollection<Bookmark> _bookmarks;
         private ICollection<Creative> _creatives;

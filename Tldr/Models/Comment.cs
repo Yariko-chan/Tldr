@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tldr.Models
 {
-    public class Comment
+    public class Comment:StateInfo
     {
         public int CommentId { get; set; }
         public int UserId { get; set; }

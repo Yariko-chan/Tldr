@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tldr.Models
 {
-    public class CreativePart
+    public class CreativePart:StateInfo
     {
         public int CreativeId { set; get; }
         public int CreativePartId { set; get; }

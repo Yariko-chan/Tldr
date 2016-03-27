@@ -103,6 +103,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Creative.cs" />
     <Compile Include="Models\CreativePart.cs" />
+    <Compile Include="Models\StateInfo.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

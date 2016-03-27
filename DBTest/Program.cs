@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Tldr.DataLayer;
+using Tldr.DataLayer.Migrations;
 using Tldr.Models;
 
 namespace DBTest
@@ -13,7 +14,9 @@ namespace DBTest
     {
         public static void Main(string[] args)
         {
-            //GetUsersNames();
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<TldrContext, Configuration>());
+            GetUsersNames();
+            Console.ReadLine();
             //GetUsersName(3);
             //InsertUser();
             //UpdateUser();
@@ -23,8 +26,8 @@ namespace DBTest
             //AddUserWithCreative();
             //EagerLoading();
             //LoadWithProjection();
-            ExplicitLoading();
-            LazyLoading();
+            //ExplicitLoading();
+            //LazyLoading();
         }
 
         private static void LazyLoading()
@@ -60,7 +63,7 @@ namespace DBTest
                     .Select(u => new
                     {
                         u,
-                        FirstCrew = u.Creatives.OrderBy(c => c.CreativeCreateDate).FirstOrDefault()
+                        FirstCrew = u.Creatives.FirstOrDefault()
                     })
                     .ToList();
             }
@@ -95,9 +98,7 @@ namespace DBTest
             {
                 CreativeName = "Another one genius",
                 Category = category,
-                User = user,
-                CreativeChangeDate = DateTime.Now,
-                CreativeCreateDate = DateTime.Now
+                User = user
             };
             user.Creatives.Add(crew);
 
@@ -182,7 +183,7 @@ namespace DBTest
             {
                 foreach (var user in context.Users)
                 {
-                    Console.WriteLine(user.Name);
+                    Console.WriteLine("{0} - {1} - {2}", user.Name, user.CreateDate, user.ModifyDate);
                 }
             }
         }

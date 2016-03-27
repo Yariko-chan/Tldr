@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Tldr.Models
 {
-    public class Category
+    public class Category:StateInfo
     {
         private ICollection<Creative> _creatives;
 
