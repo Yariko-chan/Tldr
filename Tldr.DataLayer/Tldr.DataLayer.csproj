@@ -52,6 +52,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TldrContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDataAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -61,10 +62,6 @@
     <ProjectReference Include="..\Tldr.DomainClasses\Tldr.DomainClasses.csproj">
       <Project>{c7f5d5da-e791-44a5-b3a2-7319d93bab6a}</Project>
       <Name>Tldr.DomainClasses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tldr\Tldr.csproj">
-      <Project>{5d63999e-7aa8-4fc9-954f-d4a613e4defd}</Project>
-      <Name>Tldr</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

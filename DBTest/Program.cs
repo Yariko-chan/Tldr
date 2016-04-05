@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using Tldr.DataLayer;
 using Tldr.DataLayer.Migrations;
-using Tldr.DomainClasses;
+using Tldr.DomainClasses.Entities;
 
 namespace DBTest
 {
@@ -155,17 +155,7 @@ namespace DBTest
             }
         }
 
-        private static void InsertUser()
-        {
-            var user = new User { Name = "Diana", BirthDate = DateTime.Now };
-            using (var context = new TldrContext())
-            {
-                context.Users.Add(user);
-                context.SaveChanges();
-
-                GetUser(user.UserID);
-            }
-        }
+        
 
         private static void GetUser(int v)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Tldr.DomainClasses
+namespace Tldr.DomainClasses.Entities
 {
     public class Category:StateInfo
     {

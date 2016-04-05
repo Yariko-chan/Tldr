@@ -1,0 +1,15 @@
+﻿@using Tldr.DomainClasses.Entities
+@using Tldr.HTMLHelpers
+@model Tldr.Models.CreativesListViewModel 
+
+@{
+    ViewBag.Title = "Creatives";
+}
+
+<h1>Creatives</h1>
+@foreach (var c in Model.Creatives)
+{
+    @Html.Partial("CreativeView", c)
+}
+    <div class="btn-group pull-right">@Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))</div>
+

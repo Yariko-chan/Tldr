@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
-namespace Tldr.DomainClasses
+namespace Tldr.DomainClasses.Entities
 {
     public class User:StateInfo
     {
@@ -16,6 +17,7 @@ namespace Tldr.DomainClasses
             _creatives = new List<Creative>();
         }
 
+        [Required]
         public int UserID { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }

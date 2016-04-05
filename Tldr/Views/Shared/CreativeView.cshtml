@@ -1,0 +1,10 @@
+﻿@model Tldr.DomainClasses.Entities.Creative
+
+<div class="well">
+    <h3>
+        <strong>@Model.CreativeName</strong>
+        <span class="pull-right label label-primary">@Model.Category.CategoryName</span>
+    </h3>
+    <h4><strong>@Model.User.Name</strong></h4>
+    <span class="lead">@Model.CreateDate.ToString() </span>
+</div>
